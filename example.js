@@ -23,16 +23,21 @@ const data = [
     clearMe: "text"
   },
   {
-    title : "title2",
+    title : "title1",
     description: "description1",
     blog: "This is a blog.",
     date: "11/4/2013",
     extra : {
-	link : "http://goo.cm"
+	link : {
+	  linka : 'http://google.com'
+	}
     },
     list1:[
 	{
-	    name:"mike"
+	  name:"mike"
+	},
+	{
+	  name:"Arm"
 	}
     ],
     list2:[
@@ -46,9 +51,10 @@ const data = [
 
 
 const format = {
-  Title: 'title',
-  Link: 'extra.link',
-  Hello: 'blog',
+  Title: 'title||description',
+  Link: 'extra.link.linka',
+  Hello: 'blog.a||blog',
+  name: 'list1'
 }
 
 console.log(jsonTranform(data, format))
