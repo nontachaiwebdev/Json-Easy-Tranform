@@ -1,6 +1,6 @@
 {
   "name": "easy-json-tranform",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A cool and easy way to tranform your json object.",
   "main": "lib.js",
   "repository": "https://github.com/nontachaiwebdev/Json-Easy-Tranform.git",

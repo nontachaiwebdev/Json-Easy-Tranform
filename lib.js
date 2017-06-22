@@ -1,4 +1,4 @@
-const jsonTranform = function jsonTranform(data, format) {
+const jsonTranform = function jsonTranform(data, format, defaultVale) {
   return data.map((obj, index) => {
     const data = Object.keys(format).reduce((result, field, index) => {
       const orPath = format[field].split('||').reverse()
@@ -8,7 +8,7 @@ const jsonTranform = function jsonTranform(data, format) {
 	  return obj[key]
         },obj)
 	return returnValue ? returnValue : value
-      }, '')
+      }, undefined)      
       const json =  { [field] : orPathResult}
       return Object.assign(result, json)
     },{})
