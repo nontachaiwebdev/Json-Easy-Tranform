@@ -60,7 +60,10 @@ const format = {
     field: 'xxx',
     defaultValue: [10,90]
   },
-  test: { field: 'sd' }
+  test: { 
+    field: 'sd.aasas.asasas',
+    defaultValue: 'default'
+  }
 }
 
 console.log(jsonTranform(data, format))

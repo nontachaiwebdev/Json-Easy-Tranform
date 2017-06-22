@@ -1,6 +1,6 @@
 {
   "name": "easy-json-tranform",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A cool and easy way to tranform your json object.",
   "main": "lib.js",
   "repository": "https://github.com/nontachaiwebdev/Json-Easy-Tranform.git",
@@ -8,5 +8,8 @@
   "license": "MIT",
   "scripts": {
     "start": "node lib.js"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
   }
 }
