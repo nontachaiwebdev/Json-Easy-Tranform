@@ -55,7 +55,7 @@ const format = {
   },
   Link: { field: 'extra.link.linka' },
   Hello: { field: 'blog.a||blog' },
-  name: { field: 'list1' },
+  name: 'list3||date',
   clear: { 
     field: 'xxx',
     defaultValue: [10,90]

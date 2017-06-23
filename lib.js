@@ -3,7 +3,9 @@ const _ = require('lodash')
 const jsonTranform = function jsonTranform(data, format) {
   return data.map((obj, index) => {
     const data = Object.keys(format).reduce((result, field, index) => {
-      const orPath = (format[field].field).split('||').reverse()
+      const arg = (typeof format[field] === 'object') ? format[field].field : format[field]
+      console.log(arg)
+      const orPath = arg.split('||').reverse()
       const orPathResult = orPath.reduce((value, field) => {
 	const getValue = _.get(obj, field)
 	return getValue ? getValue : value
