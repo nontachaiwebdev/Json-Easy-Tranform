@@ -4,7 +4,6 @@ const jsonTranform = function jsonTranform(data, format) {
   return data.map((obj, index) => {
     const data = Object.keys(format).reduce((result, field, index) => {
       const arg = (typeof format[field] === 'object') ? format[field].field : format[field]
-      console.log(arg)
       const orPath = arg.split('||').reverse()
       const orPathResult = orPath.reduce((value, field) => {
 	const getValue = _.get(obj, field)
