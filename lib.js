@@ -1,6 +1,11 @@
 const _ = require('lodash')
 
 const jsonTranform = function jsonTranform(data, format) {
+  const tranformFunc = tranform(format)
+  return data.constructor === Array ? tranformFunc(data) : tranformFunc(new Array(data)) 
+}
+
+const tranform = (format) => (data) => {
   return data.map((obj, index) => {
     const data = Object.keys(format).reduce((result, field, index) => {
       const arg = (typeof format[field] === 'object') ? format[field].field : format[field]
@@ -14,7 +19,7 @@ const jsonTranform = function jsonTranform(data, format) {
       return Object.assign(result, json)
     },{})
     return data
-  }) 
+  })
 }
 
 module.exports = jsonTranform

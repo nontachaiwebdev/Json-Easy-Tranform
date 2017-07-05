@@ -48,6 +48,18 @@ const data = [
 ]
 
 
+const testData = {
+  name: 'nontachai',
+  age:{
+    value: '23'
+  }
+}
+
+const testFormat = {
+  firstname: 'name',
+  something: 'age.value'
+}
+
 const format = {
   Title: {
     field: 'title||description',
@@ -66,4 +78,7 @@ const format = {
   }
 }
 
+
 console.log(jsonTranform(data, format))
+console.log(jsonTranform(testData, testFormat))
+
