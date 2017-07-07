@@ -2,7 +2,7 @@ const _ = require('lodash')
 
 const jsonTranform = function jsonTranform(data, format) {
   const tranformFunc = tranform(format)
-  return data.constructor === Array ? tranformFunc(data) : (tranformFunc(new Array(data)))[0] 
+  return data.constructor === Array ? tranformFunc(data) : tranformFunc(new Array(data))[0] 
 }
 
 const tranform = (format) => (data) => {
