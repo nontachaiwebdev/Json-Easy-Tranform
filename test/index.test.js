@@ -201,5 +201,19 @@ describe("Tranform Objects", function() {
 
       expect(result).to.deep.equal(expected)
     })
+    it("Should return undefined if not found value", function() {
+      const format = {
+        Title: 'title',
+        description: 'description',
+        test: 'test.test.test'
+      }
+      const result = jsonTranform(object, format)
+      const expected = {
+        Title: 'title1',
+        description: 'description1',
+        test: undefined
+      }
+      expect(result).to.deep.equal(expected)
+    })
   })
 })
