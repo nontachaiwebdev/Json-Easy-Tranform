@@ -7,11 +7,11 @@ const jsonTranform = function jsonTranform(data, format) {
 
 const tranform = function (format) {
   return function(data) {
-    return data.map((obj, index) => {
-      const data = Object.keys(format).reduce((result, field, index) => {
+    return data.map(function (obj, index) {
+      const data = Object.keys(format).reduce(function (result, field, index) {
         const arg = (typeof format[field] === 'object') ? format[field].field : format[field]
         const orPath = arg.split('||').reverse()
-        const orPathResult = orPath.reduce((value, field) => {
+        const orPathResult = orPath.reduce(function (value, field) {
 	  const getValue = _.get(obj, field)
 	  return getValue ? getValue : value
         }, undefined)     
