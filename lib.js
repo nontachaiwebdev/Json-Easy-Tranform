@@ -16,7 +16,8 @@ const tranform = function (format) {
 	  return getValue ? getValue : value
         }, undefined)     
         const finalValue = orPathResult ? orPathResult : format[field].defaultValue
-        const json =  { [field] : finalValue}
+        var json =  {}
+	json[field] = finalValue
         return Object.assign(result, json)
       },{})
       return data
