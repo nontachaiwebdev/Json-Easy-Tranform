@@ -21,6 +21,7 @@ const tranform = function (format) {
       },{})
       return data
     })
+  }
 }
 
 module.exports = jsonTranform
