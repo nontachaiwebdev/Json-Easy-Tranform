@@ -6,9 +6,9 @@ A cool way to transform your raw json data to every format waht you want ?
 ### Basic Usage
 example json data
 ```
-const data = { 
-  name:'John', 
-  age:30, 
+const data = {
+  name:'John',
+  age:30,
   city:"New York",
   age: 20,
   home: {
@@ -21,10 +21,10 @@ const data = {
 set json format
 ```
 const format = {
-  name: 'name',
-  home1: 'home.home1'
-  age: 'age'
-}
+  name: { field: 'name' },
+  home1: { field: 'home.home1' },
+  age: { field: 'age' }
+ }
 ```
 
 use easy-json-transform for slove problem
@@ -43,4 +43,23 @@ Result is
   home1: 'Home1 Address',
   age: 20
 }
+```
+### Advance Usage
+
+default value in case that field have not found
+```
+  const format = {
+    name: { field: 'name', defaultValue: 'Unknow user' },
+    home1: { field: 'home.home1' },
+    age: { field: 'age' }
+  }
+```
+
+assign other field in case that field have not found
+```
+  const format = {
+    name: { field: 'firstName|| lastName' },
+    home1: { field: 'home.home1' },
+    age: { field: 'age' }
+  }
 ```
