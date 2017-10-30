@@ -63,3 +63,12 @@ assign other field in case that field have not found
     age: { field: 'age' }
   }
 ```
+
+in case default value have not you case add other default with OR operation (||)
+```
+  const format = {
+    name: { field: 'firstName|| midname || lastName' },
+    home1: { field: 'home.home1' },
+    age: { field: 'age' }
+  }
+```
