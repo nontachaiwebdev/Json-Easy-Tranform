@@ -1,15 +1,20 @@
 {
   "name": "easy-json-tranform",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "A cool and easy way to tranform your json object.",
   "main": "lib.js",
   "repository": "https://github.com/nontachaiwebdev/Json-Easy-Tranform.git",
   "author": "Nontachai <sutininter@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node lib.js"
+    "start": "node lib.js",
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "dependencies": {
     "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2"
   }
 }
