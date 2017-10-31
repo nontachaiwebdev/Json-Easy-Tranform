@@ -9,12 +9,6 @@ with npm
 npm install easy-json-tranform --save
 ```
 
-### Run example
-run for show result on console log
-```
-npm start
-```
-
 ### Basic Usage
 example json data
 ```
@@ -84,3 +78,10 @@ in case default value have not you case add other default with OR operation (||)
     age: { field: 'age' }
   }
 ```
+
+### Run example
+run for show result on console log
+```
+npm start
+```
+
