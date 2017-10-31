@@ -1,6 +1,8 @@
 # Json-Easy-Tranform
 ![alt text](https://travis-ci.org/nontachaiwebdev/Json-Easy-Tranform.svg?branch=master)
 
+A cool way to transform your raw json data to every format waht you want ?
+
 ### Install
 with npm
 ```
@@ -12,8 +14,6 @@ run for show result on console log
 ```
 npm start
 ```
-
-A cool way to transform your raw json data to every format waht you want ?
 
 ### Basic Usage
 example json data
