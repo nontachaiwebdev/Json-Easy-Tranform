@@ -7,6 +7,12 @@ with npm
 npm install easy-json-tranform --save
 ```
 
+### Run example
+run for show result on console log
+```
+npm start
+```
+
 A cool way to transform your raw json data to every format waht you want ?
 
 ### Basic Usage
