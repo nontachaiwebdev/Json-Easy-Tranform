@@ -9,12 +9,6 @@ with npm
 npm install easy-json-tranform --save
 ```
 
-### Install
-with npm
-```
-npm install easy-json-tranform --save
-```
-
 ### Basic Usage
 example json data
 ```
