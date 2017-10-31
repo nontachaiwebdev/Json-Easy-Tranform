@@ -7,7 +7,7 @@
   "author": "Nontachai <sutininter@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node lib.js",
+    "start": "node example.js",
     "test": "./node_modules/mocha/bin/mocha"
   },
   "dependencies": {

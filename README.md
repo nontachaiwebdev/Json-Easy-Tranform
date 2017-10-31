@@ -10,6 +10,12 @@ npm install easy-json-tranform --save
 
 A cool way to transform your raw json data to every format waht you want ?
 
+### Install
+with npm
+```
+npm install easy-json-tranform --save
+```
+
 ### Basic Usage
 example json data
 ```
@@ -79,3 +85,10 @@ in case default value have not you case add other default with OR operation (||)
     age: { field: 'age' }
   }
 ```
+
+### Run example
+run for show result on console log
+```
+npm start
+```
+
