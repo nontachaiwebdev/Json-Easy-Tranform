@@ -11,14 +11,14 @@ const array = [
 	     link : 'http://google.com'
     },
     list1:[
-	{
-	    name:"mike"
-	}
+    	{
+    	   name:"mike"
+    	}
     ],
     list2:[
-	{
-	    item: "thing"
-	}
+    	{
+    	    item: "thing"
+    	}
     ],
     clearMe: "text"
   },
@@ -31,14 +31,26 @@ const array = [
 	     link : 'http://google.com'
     },
     list1:[
-	{
-	    name:"mike"
-	}
+    	{
+    	   name:"mike",
+         age:"10",
+         sex:'male'
+    	},
+      {
+    	   name:"jane",
+         age:"18",
+         sex:'female'
+    	},
+      {
+    	   name:"oui",
+         age:"11",
+         sex:'male'
+    	}
     ],
     list2:[
-	{
-	    item: "thing"
-	}
+    	{
+    	   item: "thing"
+    	}
     ],
     clearMe: "text"
   }
@@ -68,18 +80,46 @@ const object = {
 describe("Tranform Array Of Objects", function() {
   describe("Basic Format", function() {
     it("Should return correct format object", function() {
+      const innerFormat = {
+        fullName: {field: 'name'},
+        sexual: {field: 'sex', defaultValue: 'none'}
+      }
+
       const format = {
         Title: 'title',
-        description: 'description'
+        description: 'description',
+        list: { field: 'list1', format: innerFormat }
       }
+
       const result = jsonTranform(array, format)
       const expected = [
         {
           Title: 'title1',
-          description: 'description1' },
+          description: 'description1',
+          list: [
+            {
+              fullName: 'mike',
+              sexual: 'none'
+            }
+          ]
+        },
         {
           Title: 'title2',
-          description: 'description2'
+          description: 'description2',
+          list: [
+            {
+              fullName: 'mike',
+              sexual: 'male'
+            },
+            {
+              fullName: 'jane',
+              sexual: 'female'
+            },
+            {
+              fullName: 'oui',
+              sexual: 'male'
+            }
+          ]
         }
       ]
       expect(result).to.deep.equal(expected)
