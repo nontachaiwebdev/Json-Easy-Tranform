@@ -1,6 +1,6 @@
 {
   "name": "easy-json-tranform",
-  "version": "1.0.8",
+  "version": "1.1.3",
   "description": "A cool and easy way to tranform your json object.",
   "main": "lib.js",
   "repository": "https://github.com/nontachaiwebdev/Json-Easy-Tranform.git",
@@ -14,6 +14,7 @@
     "lodash": "^4.17.4"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "chai": "^4.0.2",
     "mocha": "^3.4.2"
   }

@@ -34,17 +34,26 @@ const array = [
     	{
     	   name:"mike",
          age:"10",
-         sex:'male'
+         sex:'male',
+         list:[
+           {name: 'xxx'}
+         ]
     	},
       {
     	   name:"jane",
          age:"18",
-         sex:'female'
+         sex:'female',
+         list:[
+           {name: 'xxx'}
+         ]
     	},
       {
     	   name:"oui",
          age:"11",
-         sex:'male'
+         sex:'male',
+         list:[
+           {name: 'xxx'}
+         ]
     	}
     ],
     list2:[
@@ -80,9 +89,15 @@ const object = {
 describe("Tranform Array Of Objects", function() {
   describe("Basic Format", function() {
     it("Should return correct format object", function() {
+
+      const innerOfInnerFormat = {
+        changeName: { field: 'name' }
+      }
+
       const innerFormat = {
         fullName: {field: 'name'},
-        sexual: {field: 'sex', defaultValue: 'none'}
+        sexual: {field: 'sex', defaultValue: 'none'},
+        // newList: { field: 'list', format: innerOfInnerFormat, defaultValue: 'fuck' }
       }
 
       const format = {
@@ -122,6 +137,7 @@ describe("Tranform Array Of Objects", function() {
           ]
         }
       ]
+
       expect(result).to.deep.equal(expected)
     })
     it("Should return undefined if not found value", function() {
